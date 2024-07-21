@@ -14,7 +14,7 @@ const createHomePageTemplate = () => /*html*/ `
 
       <main>
         <div class="book-list">
-          <button hx-get="/books">Show Books</button>
+          <button hx-get="/books" hx-swap="outerHTML">Show Books</button>
         </div>
 
         <div class="add-book-form">

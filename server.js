@@ -1,5 +1,6 @@
 import express from "express";
 import createHomePageTemplate from "./views/index.js";
+import createListTemplate from "./views/list.js";
 
 const app = express();
 
@@ -10,6 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   res.send(createHomePageTemplate());
+});
+
+app.get("/books", (req, res) => {
+  res.send(createListTemplate());
 });
 
 app.listen(3000, () => {
