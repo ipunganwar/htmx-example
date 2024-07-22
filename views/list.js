@@ -3,7 +3,7 @@ import createBookTemplate from "./book.js";
 
 const createListTemplate = () => /*html*/ `
   <ul>
-  ${BOOK_DATA.map((book) => createBookTemplate(book)).join()}
+  ${BOOK_DATA.map((book) => createBookTemplate(book)).join("")}
   </ul>
 `;
 
